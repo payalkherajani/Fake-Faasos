@@ -1,0 +1,34 @@
+{
+  "HomePage": {
+    "title": "Order food online & Eat Good, Eat Exciting!",
+    "tagline": "Eat Good, Eat Safe. Always! Now with the EatSure promise.",
+    "minitagline": "To keep your food safe and hygienic, here are some proactive steps that we have been taking.",
+    "precautions": [
+      {
+        "pre1": "Real-time Temperature Tracking of the kitchen and delivery staff"
+      },
+      { "pre2": "Contactless Delivery" },
+      { "pre3": "Regular health check-ups for all the staff members" }
+    ],
+    "cities": [
+      {
+        "location": "Pune"
+      },
+      {
+        "location": "Mumbai"
+      },
+      {
+        "location": "Banglore"
+      },
+      {
+        "location": "Delhi"
+      }
+    ]
+  },
+  "Carousal": [
+    {
+      "imageUrl": "",
+      "title": ""
+    }
+  ]
+}
