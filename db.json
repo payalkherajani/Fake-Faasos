@@ -9,26 +9,61 @@
       },
       { "pre2": "Contactless Delivery" },
       { "pre3": "Regular health check-ups for all the staff members" }
-    ],
-    "cities": [
-      {
-        "location": "Pune"
-      },
-      {
-        "location": "Mumbai"
-      },
-      {
-        "location": "Banglore"
-      },
-      {
-        "location": "Delhi"
-      }
     ]
   },
-  "Carousal": [
+
+  "Collection": {
+    "delhi": {
+      "tags": "Burger",
+      "Burger": [1, 2, 3, 4],
+      "chicken": [5, 6, 7, 8]
+    },
+    "pune": {
+      "tags": "Chicken",
+      "Chicken": [1, 2, 3],
+      "pizza": [5, 8]
+    },
+    "banglore": {
+      "tags": "pizza",
+      "pizza": [1, 9, 6]
+    },
+    "mumbai": {
+      "tags": "dosa",
+      "dosa": [1, 3],
+      "Burger": [1, 2],
+      "pizza": [1, 4, 7]
+    }
+  },
+  "cities": [
     {
-      "imageUrl": "",
-      "title": ""
+      "location": "Pune"
+    },
+    {
+      "location": "Mumbai"
+    },
+    {
+      "location": "Banglore"
+    },
+    {
+      "location": "Delhi"
+    },
+    {
+      "location": "Bhopal"
+    },
+    {
+      "location": "Noida"
+    },
+    {
+      "location": "Karnataka"
+    },
+    {
+      "location": "Mizoram"
+    },
+    {
+      "location": "Mysore"
+    },
+    {
+      "location": "Goa"
     }
   ]
 }

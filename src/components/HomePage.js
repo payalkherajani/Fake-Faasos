@@ -25,7 +25,7 @@ const HomePage = () => {
         minitagline={homePagedata.minitagline}
         precautions={homePagedata.precautions}
       />
-      <Footer cities={homePagedata.cities} />
+      <Footer />
     </Grid>
   );
 };
