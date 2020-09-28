@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { Grid, Box, Button, TextField, Typography } from "@material-ui/core";
+import {
+  Grid,
+  Box,
+  Button,
+  TextField,
+  Typography,
+  styled,
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import axios from "axios";
 import faasos from "../Images/faasos.svg";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 //Images import
 import food from "../Images/right.jpg";
 import left from "../Images/left.jpg";
@@ -58,15 +65,17 @@ const useStyles = makeStyles({
 });
 
 const Header = ({ title }) => {
+  let history = useHistory();
   const [name, setName] = useState({});
   const [search, setSearch] = useState("");
   const [match, setMatch] = useState(false);
-  const [d, setD] = useState("");
+  const [info, setInfo] = useState("");
 
   const getData = async () => {
     const res = await axios.get("http://localhost:8000/Collection");
     setName(res.data);
   };
+
   const updateSearch = (e) => {
     setSearch(e.target.value);
   };
@@ -75,14 +84,19 @@ const Header = ({ title }) => {
     for (const n in name) {
       if (n === search) {
         setMatch(true);
+        setInfo(n);
         break;
       }
     }
-    if (match) {
-      console.log("I am Here Now");
-      return <Redirect to={{ pathname: "/collection", state: { d } }} />;
+
+    if (match === true) {
+      history.push({
+        pathname: "/collection",
+        state: { info: info },
+      });
     }
   };
+
   useEffect(() => {
     getData();
   }, []);
@@ -126,6 +140,7 @@ const Header = ({ title }) => {
               value={search}
               onChange={updateSearch}
             />
+
             <Button
               variant="contained"
               color="secondary"
