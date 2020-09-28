@@ -30,13 +30,13 @@ const useStyle = makeStyles({
   },
 });
 
-const CollectionBodyHeader = () => {
+const CollectionBodyHeader = ({ address }) => {
   const classess = useStyle();
   return (
     <Box className={classess.maindiv}>
       <Box className={classess.seconddiv}>
         <Box className={classess.innerdiv1}>
-          <Typography variant="h6">Order Food Online in Pimpiri</Typography>
+          <Typography variant="h6">{address}</Typography>
         </Box>
         <Box className={classess.innerdiv2}>
           <Paper>

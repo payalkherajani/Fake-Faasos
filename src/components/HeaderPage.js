@@ -81,13 +81,12 @@ const Header = ({ title }) => {
   };
 
   const matching = () => {
-    for (const n in name) {
-      if (n === search) {
+    name.forEach((element) => {
+      if (element.name === search) {
         setMatch(true);
-        setInfo(n);
-        break;
+        setInfo(element.name);
       }
-    }
+    });
 
     if (match === true) {
       history.push({

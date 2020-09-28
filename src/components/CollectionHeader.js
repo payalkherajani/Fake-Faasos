@@ -26,7 +26,7 @@ const useStyles = makeStyles({
   },
 });
 
-const CollectionHeader = () => {
+const CollectionHeader = ({ city }) => {
   const classes = useStyles();
   return (
     <div>
@@ -38,7 +38,7 @@ const CollectionHeader = () => {
             style={{ width: "68px", height: "40px", marginRight: "2rem" }}
           />
           <Typography variant="h6" className={classes.title}>
-            Pune
+            {city}
           </Typography>
 
           <Button color="inherit">

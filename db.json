@@ -12,58 +12,69 @@
     ]
   },
 
-  "Collection": {
-    "delhi": {
-      "tags": "Burger",
-      "Burger": [1, 2, 3, 4],
-      "chicken": [5, 6, 7, 8]
+  "Collection": [
+    {
+      "name": "Delhi",
+      "address": "Order Food Online in Connaught Place Minto Road",
+      "tags": "Wraps",
+      "Wraps": [1, 2, 3, 4]
     },
-    "pune": {
-      "tags": "Chicken",
-      "Chicken": [1, 2, 3],
-      "pizza": [5, 8]
+    {
+      "name": "Pune",
+      "address": "Order Food Online in MG Road",
+      "tags": "Wraps",
+      "Wraps": [1, 2, 3]
     },
-    "banglore": {
-      "tags": "pizza",
-      "pizza": [1, 9, 6]
+    {
+      "name": "Banglore",
+      "address": "Order Food Online in Residency Road",
+      "tags": "Wraps",
+      "Wraps": [5, 2, 6]
     },
-    "mumbai": {
-      "tags": "dosa",
-      "dosa": [1, 3],
-      "Burger": [1, 2],
-      "pizza": [1, 4, 7]
+    {
+      "name": "Mumbai",
+      "address": "Order Food Online in Fort",
+      "tags": "Wraps",
+      "Wraps": [1, 3]
     }
-  },
-  "cities": [
+  ],
+
+  "food": [
     {
-      "location": "Pune"
+      "id": "1",
+      "title": "Super Striker Veg Wrap for one",
+      "description": "1 Masala Panner Tika Wrap + 1 Coke Can(330 ml)",
+      "price": "210"
     },
     {
-      "location": "Mumbai"
+      "id": "2",
+      "title": "Man of the Match Wrap for one",
+      "description": "1 Cheese Melt Panner Wrap + 1 Coke Can(330 ml)",
+      "price": "315"
     },
     {
-      "location": "Banglore"
+      "id": "3",
+      "title": "Outstanding Partnership veg wraps for Two",
+      "description": "2 Masala Paneer Tikka Wraps + 1 Coke Can (330 ML) + 1 Choco Lava Cake.",
+      "price": "420"
     },
     {
-      "location": "Delhi"
+      "id": "4",
+      "title": "Outstanding Partnership non-veg wraps for Two",
+      "description": "2 Masala Chicken Tikka Wraps + 1 Coke Can (330 ML) + 1 Choco Lava Cake",
+      "price": "520"
     },
     {
-      "location": "Bhopal"
+      "id": "5",
+      "title": "Powerplay Veg Wraps for Four",
+      "description": "4 Masala Paneer Tikka Wraps + 2 Coke Cans (330 ML each) + 2 Choco Lava",
+      "price": "840"
     },
     {
-      "location": "Noida"
-    },
-    {
-      "location": "Karnataka"
-    },
-    {
-      "location": "Mizoram"
-    },
-    {
-      "location": "Mysore"
-    },
-    {
-      "location": "Goa"
+      "id": "6",
+      "title": "All Rounder Veg NonVeg Wraps for Four",
+      "description": "2 Masala Paneer Tikka Wraps + 2 Masala Chicken Tikka Wraps + 2 Coke Cans (330 ML each) + 2 Choco Lava Cakes",
+      "price": "903"
     }
   ]
 }
