@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Grid, Divider } from "@material-ui/core";
+import { Grid, Divider, Typography } from "@material-ui/core";
 
 import Slider from "./Carousal";
 import CategoryComponent from "./Category";
@@ -15,7 +15,7 @@ const Collection = (info) => {
 
   const [data, setData] = useState([]);
   const [wrap, setWraps] = useState([]);
-  const [details, setDetails] = useState({});
+  const [details, setDetails] = useState([]);
 
   const getData = async () => {
     const res = await axios.get(
@@ -25,9 +25,21 @@ const Collection = (info) => {
     setWraps(res.data[0].Wraps);
   };
 
+  const getFoodData = () => {
+    if (wrap) {
+      wrap.map(async (w) => {
+        const res = await axios.get(`http://localhost:8000/food`);
+        setDetails(res.data);
+      });
+    }
+  };
   useEffect(() => {
     getData();
   }, []);
+
+  useEffect(() => {
+    getFoodData();
+  }, [wrap]);
 
   return (
     <Grid container direction="column">
@@ -46,26 +58,16 @@ const Collection = (info) => {
         <Grid item xs={2}>
           <CategoryComponent tags={data.tags} />
         </Grid>
-        <Grid item xs={6}>
-          {wrap.length !== 0
-            ? wrap.forEach(async (element) => {
-                const res = await axios.get(
-                  `http://localhost:8000/food/${element}`
-                );
-                //const carddata = res.data;
-                //console.log(carddata); //data is coming till here  now we need to pass that to cardComponent
-                setDetails(res.data);
-                return (
-                  <div>
-                    <CardComponent carddata={details} key={details.id} />;
-                  </div>
-                );
-              })
-            : console.log("Length is zero")}
+        <Grid item xs={6} display="flex">
+          {details.length !== 0
+            ? details.map((de) => (
+                <CardComponent details={de} key={de.id} city={city} />
+              ))
+            : console.log("Zero Length")}
         </Grid>
 
         <Grid item xs={2}>
-          <CollectionCheckout />
+          {/* <CollectionCheckout /> */}
         </Grid>
       </Grid>
     </Grid>

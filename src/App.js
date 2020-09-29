@@ -7,6 +7,7 @@ import Login from "./components/LoginPage";
 import Register from "./components/RegisterPage";
 import Collection from "./components/CollectionPage";
 import Checkout from "./components/Checkout";
+import Description from "./components/Description";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/register" component={Register} />
           <Route path="/collection" component={Collection} />
           <Route path="/checkout" component={Checkout} />
+          <Route path="/description" component={Description} />
         </Switch>
       </div>
     </Router>

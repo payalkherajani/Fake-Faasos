@@ -16,25 +16,69 @@
     {
       "name": "Delhi",
       "address": "Order Food Online in Connaught Place Minto Road",
-      "tags": "Wraps",
+      "tags": [
+        "Signature Wraps",
+        "Claasic Wraps",
+        "Take it Cheesy Wrap",
+        "Rice Bowls",
+        "Biryani",
+        "Immunity Booster Meals",
+        "Quick Meals",
+        "Royal Meals",
+        "Desserts",
+        "Beverages"
+      ],
       "Wraps": [1, 2, 3, 4]
     },
     {
       "name": "Pune",
       "address": "Order Food Online in MG Road",
-      "tags": "Wraps",
+      "tags": [
+        "Signature Wraps",
+        "Claasic Wraps",
+        "Take it Cheesy Wrap",
+        "Rice Bowls",
+        "Biryani",
+        "Immunity Booster Meals",
+        "Quick Meals",
+        "Royal Meals",
+        "Desserts",
+        "Beverages"
+      ],
       "Wraps": [1, 2, 3]
     },
     {
       "name": "Banglore",
       "address": "Order Food Online in Residency Road",
-      "tags": "Wraps",
+      "tags": [
+        "Signature Wraps",
+        "Claasic Wraps",
+        "Take it Cheesy Wrap",
+        "Rice Bowls",
+        "Biryani",
+        "Immunity Booster Meals",
+        "Quick Meals",
+        "Royal Meals",
+        "Desserts",
+        "Beverages"
+      ],
       "Wraps": [5, 2, 6]
     },
     {
       "name": "Mumbai",
       "address": "Order Food Online in Fort",
-      "tags": "Wraps",
+      "tags": [
+        "Signature Wraps",
+        "Claasic Wraps",
+        "Take it Cheesy Wrap",
+        "Rice Bowls",
+        "Biryani",
+        "Immunity Booster Meals",
+        "Quick Meals",
+        "Royal Meals",
+        "Desserts",
+        "Beverages"
+      ],
       "Wraps": [1, 3]
     }
   ],
@@ -44,37 +88,49 @@
       "id": "1",
       "title": "Super Striker Veg Wrap for one",
       "description": "1 Masala Panner Tika Wrap + 1 Coke Can(330 ml)",
-      "price": "210"
+      "price": "210",
+      "detailDesc": "1 Masala Paneer Tikka Wrap + 1 Coke Can (330 ML). When hunger is on the striking end, this is how you send it back to the pavilion.",
+      "imageUrl": "https://product-assets.faasos.io/production/product/image_1598702517856_1%20Masala%20Paneer%20Tikka%20Wrap%20%2B%201%20Coke%20Can%20%28330%20ML%29.jpg"
     },
     {
       "id": "2",
       "title": "Man of the Match Wrap for one",
       "description": "1 Cheese Melt Panner Wrap + 1 Coke Can(330 ml)",
-      "price": "315"
+      "price": "315",
+      "detailDesc": "1 Cheese Melt Paneer Wrap + 1 Coke Can (330 ML) + 1 Choco Lava Cake. Every time hunger throws a yorker hit it back like a champion with this winning veg meal.",
+      "imageUrl": "https://product-assets.faasos.io/production/product/image_1598702364572_1%20Cheese%20Melt%20Paneer%20Wrap%20%2B%201%20Coke%20Can%20%28330%20ML%29%20%2B%201%20Chocolate%20Fantasy.jpg"
     },
     {
       "id": "3",
       "title": "Outstanding Partnership veg wraps for Two",
       "description": "2 Masala Paneer Tikka Wraps + 1 Coke Can (330 ML) + 1 Choco Lava Cake.",
-      "price": "420"
+      "price": "420",
+      "detailDesc": "2 Masala Paneer Tikka Wraps + 1 Coke Can (330 ML) + 1 Choco Lava Cake. Whether you are standing at the striking end or non-striking end, doesnt really matter. This partnership meal for 2 will help you win every hungry inning for sure.",
+      "imageUrl": "https://product-assets.faasos.io/production/product/image_1598702210696_2%20Masala%20Paneer%20Tikka%20Wraps%20%2B%201%20Coke%20Can%20%28330%20ML%29%20%2B%201%20Chocolate%20Fantasy%20copy.jpg"
     },
     {
       "id": "4",
       "title": "Outstanding Partnership non-veg wraps for Two",
       "description": "2 Masala Chicken Tikka Wraps + 1 Coke Can (330 ML) + 1 Choco Lava Cake",
-      "price": "520"
+      "price": "520",
+      "detailDesc": "2 Masala Chicken Tikka Wraps + 1 Coke Can (330 ML) + 1 Choco Lava Cake. Cravings bowling in full swing? Attack it from both striking and non-striking end with this winning partnership meal for 2",
+      "imageUrl": "https://product-assets.faasos.io/production/product/image_1598702162871_2%20Masala%20Chicken%20Tikka%20Wraps%20%2B%201%20Coke%20Can%20%28330%20ML%29%20%2B%201%20Chocolate%20Fantasy.jpg"
     },
     {
       "id": "5",
       "title": "Powerplay Veg Wraps for Four",
       "description": "4 Masala Paneer Tikka Wraps + 2 Coke Cans (330 ML each) + 2 Choco Lava",
-      "price": "840"
+      "price": "840",
+      "detailDesc": "4 Masala Paneer Tikka Wraps + 2 Coke Cans (330 ML each) + 2 Choco Lava Cakes. When hunger hits the pitch and your team has a long score to beat, opt for this powerplay veg meal for 4 and get set go.",
+      "imageUrl": "https://product-assets.faasos.io/production/product/image_1591894466206_Veg%20SUPREME%20Meal%20for%20Four.jpg"
     },
     {
       "id": "6",
       "title": "All Rounder Veg NonVeg Wraps for Four",
       "description": "2 Masala Paneer Tikka Wraps + 2 Masala Chicken Tikka Wraps + 2 Coke Cans (330 ML each) + 2 Choco Lava Cakes",
-      "price": "903"
+      "price": "903",
+      "detailDesc": "2 Masala Paneer Tikka Wraps + 2 Masala Chicken Tikka Wraps + 2 Coke Cans (330 ML each) + 2 Choco Lava Cakes. Be it batting against cravings or bowling against hunger pangs, this all-rounder veg non-veg meal is a total win-win.",
+      "imageUrl": "https://product-assets.faasos.io/production/product/image_1598688231639_2%20Masala%20Paneer%20Tikka%20Wraps%20%2B%202%20Masala%20Chicken%20Tikka%20Wraps%20%2B%202%20Coke%20Cans%20%28330%20ML%20each%29%20%2B%202%20Chocolate%20Fantasy%20Cakes.jpg"
     }
   ]
 }
