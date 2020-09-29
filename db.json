@@ -132,5 +132,19 @@
       "detailDesc": "2 Masala Paneer Tikka Wraps + 2 Masala Chicken Tikka Wraps + 2 Coke Cans (330 ML each) + 2 Choco Lava Cakes. Be it batting against cravings or bowling against hunger pangs, this all-rounder veg non-veg meal is a total win-win.",
       "imageUrl": "https://product-assets.faasos.io/production/product/image_1598688231639_2%20Masala%20Paneer%20Tikka%20Wraps%20%2B%202%20Masala%20Chicken%20Tikka%20Wraps%20%2B%202%20Coke%20Cans%20%28330%20ML%20each%29%20%2B%202%20Chocolate%20Fantasy%20Cakes.jpg"
     }
+  ],
+  "cities": [
+    {
+      "location": "Pune"
+    },
+    {
+      "location": "Mumbai"
+    },
+    {
+      "location": "Banglore"
+    },
+    {
+      "location": "Delhi"
+    }
   ]
 }
