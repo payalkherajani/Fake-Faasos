@@ -10,7 +10,7 @@ import {
 import { makeStyles } from "@material-ui/styles";
 import axios from "axios";
 import faasos from "../Images/faasos.svg";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 //Images import
 import food from "../Images/right.jpg";
 import left from "../Images/left.jpg";
@@ -62,6 +62,9 @@ const useStyles = makeStyles({
     color: "white",
     fontWeight: "700",
   },
+  a: {
+    textDecoration: "none",
+  },
 });
 
 const Header = ({ title }) => {
@@ -111,20 +114,24 @@ const Header = ({ title }) => {
               <img src={faasos} alt="svg" />
             </Box>
             <Box>
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classess.signup}
-              >
-                Signup
-              </Button>
-              <Button
-                variant="outlined"
-                color="secondary"
-                className={classess.login}
-              >
-                Login
-              </Button>
+              <Link to="/register" className={classess.a}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  className={classess.signup}
+                >
+                  Signup
+                </Button>
+              </Link>
+              <Link to="/login" className={classess.a}>
+                <Button
+                  variant="outlined"
+                  color="secondary"
+                  className={classess.login}
+                >
+                  Login
+                </Button>
+              </Link>
             </Box>
           </Box>
           <Typography variant="h2" className={classess.pageTitle}>

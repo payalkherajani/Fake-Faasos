@@ -67,7 +67,7 @@ const Collection = (info) => {
         </Grid>
 
         <Grid item xs={2}>
-          {/* <CollectionCheckout /> */}
+          <CollectionCheckout />
         </Grid>
       </Grid>
     </Grid>

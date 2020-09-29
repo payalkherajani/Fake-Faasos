@@ -11,6 +11,7 @@
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
     "json-server": "^0.16.1",
+    "local-storage": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-multi-carousel": "^2.5.5",

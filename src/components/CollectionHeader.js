@@ -11,6 +11,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { makeStyles } from "@material-ui/core";
 import logo from "../Images/collectionlogo.svg";
 import PersonIcon from "@material-ui/icons/Person";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   root: {
@@ -23,6 +24,10 @@ const useStyles = makeStyles({
     backgroundColor: "white",
     color: "black",
     marginBottom: "1rem",
+  },
+  a: {
+    textDecoration: "none",
+    color: "black",
   },
 });
 
@@ -41,10 +46,12 @@ const CollectionHeader = ({ city }) => {
             {city}
           </Typography>
 
-          <Button color="inherit">
-            <PersonIcon />
-            Login
-          </Button>
+          <Link to="/login" className={classes.a}>
+            <Button color="inherit">
+              <PersonIcon />
+              Login
+            </Button>
+          </Link>
 
           <IconButton
             edge="end"
