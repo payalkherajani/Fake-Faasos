@@ -16,6 +16,10 @@ const Collection = (info) => {
   const [data, setData] = useState([]);
   const [wrap, setWraps] = useState([]);
   const [details, setDetails] = useState([]);
+  const [price, setPrice] = useState(0);
+  const [checkoutTitle, setCheckoutTitle] = useState("");
+  const [counter, setCounter] = useState(0);
+  const [total, setTotal] = useState(0);
 
   const getData = async () => {
     const res = await axios.get(
@@ -61,13 +65,28 @@ const Collection = (info) => {
         <Grid item xs={6} display="flex">
           {details.length !== 0
             ? details.map((de) => (
-                <CardComponent details={de} key={de.id} city={city} />
+                <CardComponent
+                  details={de}
+                  key={de.id}
+                  city={city}
+                  setPrice={setPrice}
+                  setCheckoutTitle={setCheckoutTitle}
+                  setCounter={setCounter}
+                  counter={counter}
+                  setTotal={setTotal}
+                  total={total}
+                />
               ))
             : console.log("Zero Length")}
         </Grid>
 
         <Grid item xs={2}>
-          <CollectionCheckout />
+          <CollectionCheckout
+            price={price}
+            checkoutTitle={checkoutTitle}
+            counter={counter}
+            total={total}
+          />
         </Grid>
       </Grid>
     </Grid>

@@ -11,7 +11,6 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import { Link } from "react-router-dom";
-import CollectionCheckout from "./CollectionCheckout";
 
 const styles = makeStyles({
   cards: {
@@ -40,13 +39,16 @@ const styles = makeStyles({
   },
 });
 
-const CardComponent = ({ details, city }) => {
-  const [p, setP] = useState("");
-
-  const calculate = () => {
-    setP(details.price);
-  };
-
+const CardComponent = ({
+  details,
+  city,
+  setPrice,
+  setCheckoutTitle,
+  setCounter,
+  counter,
+  setTotal,
+  total,
+}) => {
   const classess = styles();
   return (
     <Box className={classess.cards}>
@@ -106,11 +108,15 @@ const CardComponent = ({ details, city }) => {
               marginLeft: "auto",
               marginRight: "auto",
             }}
-            onClick={calculate}
+            onClick={() => (
+              setPrice(details.price),
+              setCheckoutTitle(details.title),
+              setCounter(counter + 1),
+              setTotal(Number(total) + Number(details.price))
+            )}
           >
             Add
           </Button>
-          {console.log(p)}
         </CardActions>
       </Card>
     </Box>
