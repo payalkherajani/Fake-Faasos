@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Grid, Divider, Typography } from "@material-ui/core";
+import { Grid, Divider } from "@material-ui/core";
 
 import Slider from "./Carousal";
 import CategoryComponent from "./Category";
@@ -16,6 +16,7 @@ const Collection = (info) => {
   const [data, setData] = useState([]);
   const [wrap, setWraps] = useState([]);
   const [details, setDetails] = useState([]);
+  // const [obj, setObj] = useState([]);
   const [price, setPrice] = useState(0);
   const [checkoutTitle, setCheckoutTitle] = useState("");
   const [counter, setCounter] = useState(0);
@@ -37,6 +38,11 @@ const Collection = (info) => {
       });
     }
   };
+
+  // if (details) {
+  //   obj.push({ cards: details });
+  //   console.log(obj);
+  // }
   useEffect(() => {
     getData();
   }, []);

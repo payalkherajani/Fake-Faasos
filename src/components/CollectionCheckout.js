@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Paper, Typography, Box, Button } from "@material-ui/core";
 
 import { useHistory } from "react-router-dom";
 
 const CollectionCheckout = ({ price, checkoutTitle, counter, total }) => {
   let history = useHistory();
-  const p = price;
-  const t = checkoutTitle;
+  const [obj, setObj] = useState([]);
+
+  useEffect(() => {
+    if ((price, checkoutTitle)) {
+      obj.push({ title: checkoutTitle, pr: price });
+    }
+  }, []);
+
   const evaluate = () => {
     total === 0
       ? alert("You need to select atleast 1 Wrap")
@@ -20,12 +26,21 @@ const CollectionCheckout = ({ price, checkoutTitle, counter, total }) => {
       <Box>
         <Typography variant="h5">Cart has {counter} Item</Typography>
       </Box>
-      <Box style={{ display: "flex", gap: "50px", margin: "10px" }}>
+      <Box
+        style={{
+          display: "flex",
+          gap: "50px",
+          margin: "10px",
+          flexDirection: "column",
+        }}
+      >
         {counter !== 0 ? (
-          <Box display="flex" gridGap="1rem">
-            <Box>{t} </Box>
-            <Box>₹ {p} </Box>
-          </Box>
+          obj.map((o) => (
+            <li style={{ listStyleType: "none" }}>
+              <Box>{o.title} </Box>
+              <Box>₹ {o.pr} </Box>
+            </li>
+          ))
         ) : (
           <Box display="flex" gridGap="1rem">
             <Box>Your Cart is Empty</Box>
@@ -35,7 +50,7 @@ const CollectionCheckout = ({ price, checkoutTitle, counter, total }) => {
       </Box>
       <Box style={{ display: "flex", gap: "85px", margin: "10px" }}>
         <Box>SubTotal</Box>
-        <Box>{total}</Box>
+        <Box>₹ {total}</Box>
       </Box>
       <p>Extra Charges may apply</p>
       <Button
