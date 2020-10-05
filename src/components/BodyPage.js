@@ -2,12 +2,17 @@ import React from "react";
 import { Grid, Typography, Box, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import eatlogo from "../Images/eat-sure-logo.png";
+
+//Icons
+import PanToolIcon from "@material-ui/icons/PanTool";
+import LocalPharmacyIcon from "@material-ui/icons/LocalPharmacy";
+import KitchenIcon from "@material-ui/icons/Kitchen";
 const styles = makeStyles({
   tag: {
     color: "rgb(51, 51, 51)",
     fontWeight: "600",
     textAlign: "center",
-    fontSize: "30px",
+    fontSize: "2rem",
   },
   minitag: {
     color: "rgb(126, 126, 126)",
@@ -37,13 +42,13 @@ const styles = makeStyles({
   list: {
     display: "flex",
     listStyleType: "none",
-    gap: "15px",
+    gap: "10px",
     alignItems: "center",
   },
   listElement: {
     marginBottom: "0",
     display: "block",
-    padding: "0 2rem",
+    padding: "0 1rem",
     borderRight: "1px solid rgb(224, 224, 224)",
     textAlign: "center",
   },
@@ -55,7 +60,9 @@ const styles = makeStyles({
     marginLeft: "10px",
     marginTop: "2rem",
     fontSize: "10px",
-    textTransform: "lowercase",
+    textTransform: "uppercase",
+    fontSize: "10px",
+    backgroundColor: "white",
   },
   bottomline: {
     color: "rgb(255, 211, 68)",
@@ -68,7 +75,7 @@ const Body = ({ tagline, minitagline }) => {
   const classess = styles();
 
   return (
-    <Box mt={2}>
+    <Box mt={7}>
       <Grid item container xs={12}>
         <Grid item xs={2} />
         <Grid item xs={8} container direction="column">
@@ -99,29 +106,81 @@ const Body = ({ tagline, minitagline }) => {
             container
             direction="row"
             style={{ padding: "1rem", marginBottom: "1rem" }}
+            justify="space-between"
           >
             <Grid
               item
-              xs={4}
+              xs={6}
               container
               direction="column"
               style={{ padding: "1rem" }}
             >
-              <Grid item style={{ padding: "0.5rem" }}>
-                <strong>Real-time Temperature</strong> Tracking of the kitchen
-                and delivery staff
+              <Grid
+                item
+                style={{ padding: "1rem", display: "flex", gap: "20px" }}
+              >
+                <div>
+                  <KitchenIcon />
+                </div>{" "}
+                {""}
+                <div style={{ fontSize: "1rem" }}>
+                  <strong>Real-time Temperature</strong> Tracking of the kitchen
+                  and delivery staff
+                </div>
               </Grid>
-              <Grid item style={{ padding: "0.5rem" }}>
-                <strong>Contactless Delivery</strong>
+              <Grid
+                item
+                style={{ padding: "1rem", display: "flex", gap: "20px" }}
+              >
+                <div>
+                  <PanToolIcon />
+                </div>
+                <div style={{ fontSize: "1rem" }}>
+                  {" "}
+                  <strong>Contactless Delivery</strong>
+                </div>
               </Grid>
-              <Grid item style={{ padding: "0.5rem" }}>
-                <strong>Regular health </strong>check-ups for all the staff
-                members
+              <Grid
+                item
+                style={{ padding: "1rem", display: "flex", gap: "20px" }}
+              >
+                <div>
+                  {" "}
+                  <LocalPharmacyIcon />
+                </div>
+                <div style={{ fontSize: "1rem" }}>
+                  {" "}
+                  <strong>Regular health </strong>check-ups for all the staff
+                  members
+                </div>
               </Grid>
             </Grid>
-            <Grid item xs={4} style={{ padding: "0.5rem" }}>
-              <div>
-                <iframe src="https://www.youtube.com/embed/SBGKA87fmCM" />
+            <Grid
+              item
+              xs={2}
+              style={{
+                paddingRigth: "1rem",
+                paddingLeft: "1rem",
+                maxWidth: "50%",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  overflow: "hidden",
+                  borderRadius: "0.5rem",
+                }}
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/SBGKA87fmCM"
+                  frameborder="0"
+                  width="400"
+                  height="223"
+                  loading="lazy"
+                  allow="accelometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
               </div>
             </Grid>
           </Grid>
@@ -199,16 +258,6 @@ const Body = ({ tagline, minitagline }) => {
               Know More
             </Button>
           </Box>
-        </Grid>
-        <Grid item>
-          <Typography
-            variant="h6"
-            component="p"
-            className={classess.bottomline}
-          >
-            Here are some additional measures which our kitchen teams are
-            rigorously following!
-          </Typography>
         </Grid>
       </Grid>
     </Box>

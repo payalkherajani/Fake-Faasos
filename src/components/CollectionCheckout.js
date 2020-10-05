@@ -12,7 +12,7 @@ const CollectionCheckout = ({ price, checkoutTitle, counter, total }) => {
       obj.push({ title: checkoutTitle, pr: price });
     }
   }, []);
-
+  console.log(obj);
   const evaluate = () => {
     total === 0
       ? alert("You need to select atleast 1 Wrap")
