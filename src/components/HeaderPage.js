@@ -26,11 +26,13 @@ const useStyles = makeStyles({
     backgroundSize: "cover",
     margin: "0px",
     height: "520px",
+    width: "auto",
   },
   rightside: {
-    width: "450px",
+    width: "100%",
     height: "560px",
     borderBottomLeftRadius: "3rem",
+    objectFit: "cover",
   },
   box: {
     margin: "2rem",
@@ -69,7 +71,7 @@ const useStyles = makeStyles({
     flexBasis: "60%",
   },
   pageTitle: {
-    fontSize: "calc(40px + 11 * ((100vw - 300px) / 1100))",
+    fontSize: "calc(30px + 11 * ((100vw - 300px) / 1100))",
     color: "white",
     fontWeight: "600",
   },
@@ -78,7 +80,7 @@ const useStyles = makeStyles({
   },
   lfbox: {
     display: "flex",
-    width: "120%",
+    width: "110%",
   },
 });
 
@@ -120,8 +122,8 @@ const Header = ({ title }) => {
 
   const classess = useStyles();
   return (
-    <Grid item container xs={12}>
-      <Grid item md={8} xs={12} className={classess.leftside}>
+    <Grid item container xs={12} md={12} sm={12}>
+      <Grid item xs={12} sm={12} lg={8} md={9} className={classess.leftside}>
         <Box className={classess.box}>
           <Box className={classess.fieldbox}>
             <Box className={classess.firstbox}>
@@ -173,8 +175,8 @@ const Header = ({ title }) => {
           </Box>
         </Box>
       </Grid>
-      <Hidden mdDown>
-        <Grid item xs={4}>
+      <Hidden smDown>
+        <Grid item lg={4} md={3} sm={0}>
           <img src={food} alt="foodimage" className={classess.rightside} />
         </Grid>
       </Hidden>

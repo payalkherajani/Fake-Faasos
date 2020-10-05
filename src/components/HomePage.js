@@ -18,7 +18,7 @@ const HomePage = () => {
     getData();
   }, []);
   return (
-    <Grid container direction="column">
+    <Grid container direction="column" sm={12} md={12} xs={12}>
       <Header title={homePagedata.title} />
       <Body
         tagline={homePagedata.tagline}

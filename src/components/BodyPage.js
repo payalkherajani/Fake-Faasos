@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Box, Button } from "@material-ui/core";
+import { Grid, Typography, Box, Button, Hidden } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import eatlogo from "../Images/eat-sure-logo.png";
 
@@ -76,9 +76,12 @@ const Body = ({ tagline, minitagline }) => {
 
   return (
     <Box mt={7}>
-      <Grid item container xs={12}>
-        <Grid item xs={2} />
-        <Grid item xs={8} container direction="column">
+      <Grid item container xs={12} sm={12}>
+        <Hidden mdDown>
+          <Grid item xs={2} />
+        </Hidden>
+
+        <Grid item xs={8} md={11} sm={12} container direction="column">
           <Grid item container direction="column" style={{ padding: "1rem" }}>
             <Grid item>
               <Typography
@@ -106,7 +109,7 @@ const Body = ({ tagline, minitagline }) => {
             container
             direction="row"
             style={{ padding: "1rem", marginBottom: "1rem" }}
-            justify="space-between"
+            justify="space-evenly"
           >
             <Grid
               item
@@ -185,81 +188,85 @@ const Body = ({ tagline, minitagline }) => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={2} />
+        <Hidden mdDown>
+          <Grid item xs={2} />
+        </Hidden>
       </Grid>
-      <Grid
-        xs={12}
-        container
-        item
-        className={classess.bottom}
-        direction="column"
-        textAlign="center"
-        justify="center"
-        alignItems="center"
-      >
-        <Grid item>
-          <Box className={classess.eatsureblock} display="flex">
-            <Box>
-              <img
-                src={eatlogo}
-                alt="eatsure block"
-                className={classess.logo}
-              />
+      <Hidden mdDown>
+        <Grid
+          xs={12}
+          container
+          item
+          className={classess.bottom}
+          direction="column"
+          textAlign="center"
+          justify="center"
+          alignItems="center"
+        >
+          <Grid item>
+            <Box className={classess.eatsureblock} display="flex">
+              <Box>
+                <img
+                  src={eatlogo}
+                  alt="eatsure block"
+                  className={classess.logo}
+                />
+              </Box>
+              <Box>
+                <ul className={classess.list}>
+                  <li className={classess.listElement}>
+                    <span
+                      style={{
+                        backgroundColor: "rgb(232, 155, 61)",
+                        color: "white",
+                      }}
+                    >
+                      ✔
+                    </span>
+                    <p>Medically Certified Kitchen Staff</p>
+                  </li>
+                  <li className={classess.listElement}>
+                    <span
+                      style={{
+                        backgroundColor: "rgb(232, 155, 61)",
+                        color: "white",
+                      }}
+                    >
+                      ✔
+                    </span>
+                    <p>200+ Stringent Quality Checks</p>
+                  </li>
+                  <li className={classess.listElement}>
+                    <span
+                      style={{
+                        backgroundColor: "rgb(232, 155, 61)",
+                        color: "white",
+                      }}
+                    >
+                      ✔
+                    </span>
+                    <p>No Artificial Colours or Flavours</p>
+                  </li>
+                  <li className={classess.listElement}>
+                    <span
+                      style={{
+                        backgroundColor: "rgb(232, 155, 61)",
+                        color: "white",
+                      }}
+                    >
+                      ✔
+                    </span>
+                    <p>Double Sealed Packaging</p>
+                  </li>
+                </ul>
+              </Box>
+              <Button variant="outlined" className={classess.morebutton}>
+                Know More
+              </Button>
             </Box>
-            <Box>
-              <ul className={classess.list}>
-                <li className={classess.listElement}>
-                  <span
-                    style={{
-                      backgroundColor: "rgb(232, 155, 61)",
-                      color: "white",
-                    }}
-                  >
-                    ✔
-                  </span>
-                  <p>Medically Certified Kitchen Staff</p>
-                </li>
-                <li className={classess.listElement}>
-                  <span
-                    style={{
-                      backgroundColor: "rgb(232, 155, 61)",
-                      color: "white",
-                    }}
-                  >
-                    ✔
-                  </span>
-                  <p>200+ Stringent Quality Checks</p>
-                </li>
-                <li className={classess.listElement}>
-                  <span
-                    style={{
-                      backgroundColor: "rgb(232, 155, 61)",
-                      color: "white",
-                    }}
-                  >
-                    ✔
-                  </span>
-                  <p>No Artificial Colours or Flavours</p>
-                </li>
-                <li className={classess.listElement}>
-                  <span
-                    style={{
-                      backgroundColor: "rgb(232, 155, 61)",
-                      color: "white",
-                    }}
-                  >
-                    ✔
-                  </span>
-                  <p>Double Sealed Packaging</p>
-                </li>
-              </ul>
-            </Box>
-            <Button variant="outlined" className={classess.morebutton}>
-              Know More
-            </Button>
-          </Box>
+          </Grid>
         </Grid>
-      </Grid>
+      </Hidden>
     </Box>
   );
 };
