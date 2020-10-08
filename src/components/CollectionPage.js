@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import { Grid, Divider } from "@material-ui/core";
+import { Grid, Divider, Hidden } from "@material-ui/core";
 
 import Slider from "./Carousal";
 import CategoryComponent from "./Category";
@@ -53,22 +53,26 @@ const Collection = (info) => {
 
   return (
     <Grid container direction="column">
-      <Grid item md={11} lg={12}>
+      <Grid item sm={11} md={11} lg={12}>
         <CollectionHeader city={city} />
       </Grid>
-      <Grid item xs={12} md={11} lg={12}>
+      <Grid item xs={12} sm={11} md={11} lg={12}>
         <Slider />
       </Grid>
-      <Grid item md={11} lg={12}>
+      <Grid item sm={11} md={11} lg={12}>
         <CollectionBodyHeader address={data.address} />
       </Grid>
-      <Divider variant="middle" style={{ marginBottom: "1rem" }} />
-      <Grid container item spacing={3}>
-        <Grid item xs={1}></Grid>
-        <Grid item xs={2}>
+      <Hidden mdDown>
+        <Divider variant="middle" style={{ marginBottom: "1rem" }} />
+      </Hidden>
+      <Grid container item spacing={2}>
+        <Hidden mdDown>
+          <Grid item md={1} lg={1}></Grid>
+        </Hidden>
+        <Grid item xs={2} md={3} lg={2} style={{ margin: "15px" }}>
           <CategoryComponent tags={data.tags} />
         </Grid>
-        <Grid item xs={6} display="flex">
+        <Grid item xs={6} md={5} lg={6} display="flex">
           {details.length !== 0
             ? details.map((de) => (
                 <CardComponent
@@ -86,7 +90,7 @@ const Collection = (info) => {
             : console.log("Zero Length")}
         </Grid>
 
-        <Grid item xs={2}>
+        <Grid item xs={2} md={2} lg={2}>
           <CollectionCheckout
             price={price}
             checkoutTitle={checkoutTitle}

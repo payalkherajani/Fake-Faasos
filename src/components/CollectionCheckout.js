@@ -22,7 +22,7 @@ const CollectionCheckout = ({ price, checkoutTitle, counter, total }) => {
         });
   };
   return (
-    <Paper style={{ width: "150%", padding: "1rem" }}>
+    <Paper style={{ width: "120%", padding: "1rem", marginTop: "15px" }}>
       <Box>
         <Typography variant="h5">Cart has {counter} Item</Typography>
       </Box>

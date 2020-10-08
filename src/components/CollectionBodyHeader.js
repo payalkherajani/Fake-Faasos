@@ -52,16 +52,16 @@ const CollectionBodyHeader = ({ address }) => {
               />
             </div>
           </Paper>
-          <Paper style={{ width: "40%", padding: "0px 3px" }}>
+          <Paper style={{ width: "25%", padding: "0px 3px" }}>
             <FormControlLabel
               control={<Checkbox name="checkedC" />}
-              label="Non-Veg Only"
+              label="Non-Veg"
             />
           </Paper>
-          <Paper style={{ width: "30%", padding: "0px 3px" }}>
+          <Paper style={{ width: "20%", padding: "0px 3px" }}>
             <FormControlLabel
               control={<Checkbox name="checkedC" />}
-              label="Veg Only"
+              label="Veg"
             />
           </Paper>
         </Box>
