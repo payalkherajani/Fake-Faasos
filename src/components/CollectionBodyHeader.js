@@ -12,10 +12,11 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyle = makeStyles({
   maindiv: {
-    width: "70%",
+    width: "100%",
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: "2rem",
+    marginTop: "1.5rem",
+    paddingLeft: "5px",
   },
   seconddiv: {
     display: "flex",
@@ -24,7 +25,7 @@ const useStyle = makeStyles({
     flexBasis: "50%",
   },
   innerdiv2: {
-    flexBasis: "50%",
+    flexBasis: "60%",
     display: "flex",
     gap: "10px",
   },

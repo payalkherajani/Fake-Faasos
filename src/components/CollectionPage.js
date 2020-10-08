@@ -53,16 +53,16 @@ const Collection = (info) => {
 
   return (
     <Grid container direction="column">
-      <Grid item>
+      <Grid item md={11} lg={12}>
         <CollectionHeader city={city} />
       </Grid>
-      <Grid item xs={12}>
+      <Grid item xs={12} md={11} lg={12}>
         <Slider />
       </Grid>
-      <Grid item>
+      <Grid item md={11} lg={12}>
         <CollectionBodyHeader address={data.address} />
       </Grid>
-      <Divider variant="middle" style={{ marginBottom: "2rem" }} />
+      <Divider variant="middle" style={{ marginBottom: "1rem" }} />
       <Grid container item spacing={3}>
         <Grid item xs={1}></Grid>
         <Grid item xs={2}>
