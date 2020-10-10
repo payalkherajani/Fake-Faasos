@@ -7,18 +7,19 @@ const CollectionCheckout = ({ price, checkoutTitle, counter, total }) => {
   let history = useHistory();
   const [obj, setObj] = useState([]);
 
-  useEffect(() => {
+ 
     if ((price, checkoutTitle)) {
-      obj.push({ title: checkoutTitle, pr: price });
+     obj.push({ title: checkoutTitle, pr: price }) 
     }
-  }, []);
-  console.log(obj);
+    
+ 
   const evaluate = () => {
+    console.log(total)
     total === 0
       ? alert("You need to select atleast 1 Wrap")
       : history.push({
           pathname: "/checkout",
-          state: { total: total },
+          state: {total: total}
         });
   };
   return (

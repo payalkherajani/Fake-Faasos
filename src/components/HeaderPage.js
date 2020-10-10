@@ -108,17 +108,19 @@ const Header = ({ title }) => {
       }
     });
 
-    if (match === true) {
-      history.push({
-        pathname: "/collection",
-        state: { info: info },
-      });
-    }
   };
 
   useEffect(() => {
     getData();
   }, []);
+
+  
+  if (match === true) {
+    history.push({
+      pathname: "/collection",
+      state: { info: info },
+    });
+  }
 
   const classess = useStyles();
   return (

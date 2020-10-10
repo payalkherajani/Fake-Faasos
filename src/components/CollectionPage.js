@@ -16,7 +16,6 @@ const Collection = (info) => {
   const [data, setData] = useState([]);
   const [wrap, setWraps] = useState([]);
   const [details, setDetails] = useState([]);
-  // const [obj, setObj] = useState([]);
   const [price, setPrice] = useState(0);
   const [checkoutTitle, setCheckoutTitle] = useState("");
   const [counter, setCounter] = useState(0);
@@ -39,10 +38,6 @@ const Collection = (info) => {
     }
   };
 
-  // if (details) {
-  //   obj.push({ cards: details });
-  //   console.log(obj);
-  // }
   useEffect(() => {
     getData();
   }, []);
@@ -50,7 +45,6 @@ const Collection = (info) => {
   useEffect(() => {
     getFoodData();
   }, [wrap]);
-
   return (
     <Grid container direction="column">
       <Grid item sm={11} md={11} lg={12}>
